@@ -1,0 +1,5 @@
+#details_form{
+    display: flex;
+    flex-flow: column wrap;
+    margin: 10px;
+}
