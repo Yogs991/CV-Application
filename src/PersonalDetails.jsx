@@ -1,26 +1,56 @@
 // import React from "react";
 import { useState } from "react";
-import './PersonalDetails.css';
+import InputField from "./InputField";
 
 function Details(){
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [phone, setPhone] = useState("");
-    const [address, setAddress] = useState("");
+    const [formData, setFormData] = useState("");
+
+    function handleChange(event){
+        setFormData({...formData,[event.target.name]: event.target.name});
+    }
 
     return(
-        <>
-            <form id="details_form">
-                <label htmlFor="name">Name</label>
-                <input id="name" value={name} onChange = {e=>setName(e.target.value)} />
-                <label htmlFor="email">email</label>
-                <input id="email" value={email} onChange = {e=>setEmail(e.target.value)} />
-                <label htmlFor="phone">phone</label>
-                <input id="phone" value={phone} onChange = {e=>setPhone(e.target.value)} />
-                <label htmlFor="address">address</label>
-                <input id="address" value={address} onChange = {e=>setAddress(e.target.value)} />
-            </form>
-        </>
+        <form className="details-form">
+            <InputField 
+                label="First Name"
+                name="First Name"
+                type="text"
+                value={formData.name}
+                onChange={handleChange}
+            />
+
+            <InputField 
+                label="Last Name"
+                name="Last Name"
+                type="text"
+                value={formData.name}
+                onChange={handleChange}
+            />
+
+            <InputField 
+                label="Email"
+                name="Email"
+                type="Email"
+                value={formData.Email}
+                onChange={handleChange}
+            />
+
+            <InputField 
+                label="Phone"
+                name="Phone"
+                type="Phone"
+                value={formData.Phone}
+                onChange={handleChange}
+            />
+
+            <InputField 
+                label="Address"
+                name="Address"
+                type="text"
+                value={formData.Phone}
+                onChange={handleChange}
+            />
+        </form>
     )
 }
 
