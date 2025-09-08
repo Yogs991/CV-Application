@@ -2,15 +2,17 @@
 import './App.css'
 import './PersonalDetails';
 import Details from './PersonalDetails';
+import Education from './Education';
+import Experience from './Experience';
 
 function App() {
   return(
-    <div>
+    <div className='forms'>
       <Details/>
-      <Details/>
-      <Details/>
+      <Education/>
+      <Experience/>
     </div>
   )
 }
 
-export default App
+export default App;
