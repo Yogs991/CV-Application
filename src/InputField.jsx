@@ -1,19 +1,20 @@
-function InputField({label, name, value, onChange, type="text"}){
+function InputField({label, name, value, onChange, type="text", className=""}){
     if(type==="textarea"){
         return(
-            <div>
+            <div className="input-wrapper">
                 <label htmlFor={name}>{label}</label>
                 <textarea 
                     id={name}
                     name={name}
                     value={value}
                     onChange={onChange}
+                    className={className}
                 />
             </div>
         );
     }
     return(
-        <div>
+        <div className="input-wrapper">
             <label htmlFor={name}>{label}</label>
             <input 
                 id={name}
@@ -21,6 +22,7 @@ function InputField({label, name, value, onChange, type="text"}){
                 name={name}
                 value={value}
                 onChange={onChange}
+                className={className}
             />
         </div>
     )

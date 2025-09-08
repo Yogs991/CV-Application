@@ -5,7 +5,11 @@ import Details from './PersonalDetails';
 
 function App() {
   return(
-    <Details/>
+    <div>
+      <Details/>
+      <Details/>
+      <Details/>
+    </div>
   )
 }
 

@@ -10,47 +10,60 @@ function Details(){
     }
 
     return(
-        <form className="details-form">
-            <InputField 
-                label="First Name"
-                name="First Name"
-                type="text"
-                value={formData.name}
-                onChange={handleChange}
-            />
+        <div className="details-container">
+            <form className="form">
+            <h1>Personal Details</h1>
+                <div className="input-control">
+                    <InputField
+                        className="input-data" 
+                        label="First Name"
+                        name="First Name"
+                        type="text"
+                        value={formData.name}
+                        onChange={handleChange}
+                    />
 
-            <InputField 
-                label="Last Name"
-                name="Last Name"
-                type="text"
-                value={formData.name}
-                onChange={handleChange}
-            />
+                    <InputField
+                        className="input-data" 
+                        label="Last Name"
+                        name="Last Name"
+                        type="text"
+                        value={formData.name}
+                        onChange={handleChange}
+                    />
+                </div>
+                <div className="input-control">
+                    <InputField
+                        className="input-data" 
+                        label="Email"
+                        name="Email"
+                        type="Email"
+                        value={formData.Email}
+                        onChange={handleChange}
+                    />
 
-            <InputField 
-                label="Email"
-                name="Email"
-                type="Email"
-                value={formData.Email}
-                onChange={handleChange}
-            />
-
-            <InputField 
-                label="Phone"
-                name="Phone"
-                type="Phone"
-                value={formData.Phone}
-                onChange={handleChange}
-            />
-
-            <InputField 
-                label="Address"
-                name="Address"
-                type="text"
-                value={formData.Phone}
-                onChange={handleChange}
-            />
-        </form>
+                    <InputField
+                        className="input-data" 
+                        label="Phone"
+                        name="Phone"
+                        type="Phone"
+                        value={formData.Phone}
+                        onChange={handleChange}
+                    />
+                </div>
+                <div className="input-control">
+                    <InputField
+                        className="input-data" 
+                        label="Address"
+                        name="Address"
+                        type="text"
+                        value={formData.Phone}
+                        onChange={handleChange}
+                    />
+                </div>
+            </form>
+        </div>
+        
     )
 }
 
