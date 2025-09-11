@@ -1,55 +1,35 @@
-/* body{
-    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-    font-family: 'Poppins', sans-serif;
-}
-
-.details-container{
-    padding: 0;
-}
-
-.form{
-    width: 300px;
-    margin: 0 5vh 20vh 5vh;
-    padding: 20px 5vh 30px 20px ;
-    background-color: whitesmoke;
-    border-radius: 4px;
-    font-size: 12px;
-}
-
-.form h1{
-    color: #0f2027;
-    text-align: center;
-}
-
-.input-control{
-    display: flex;
-    flex-direction: column;
-}
-
-.input-control input{
-    border: 2px solid #f0f0f0;
-    border-radius: 4px;
-    display: block;
-    font-size: 12px;
-    padding: 10px;
-    width: 100%;
-}
-
-.input-control input:focus{
-    outline: 0;
-}
-
-.input-control label{
-    color: black;
-    font-size: 16px;
-} */
-
 body{
     background-color: #111;
     color: #fff;
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+} */
+
+.forms{
+    flex: 0 0 600px;
+}
+
+.preview{
+    margin-left: auto;
+    background-color: green;
+    padding: 20px;
+    min-width: 300px;
+}
 .details-container{
     background-color: #111;
     padding: 20px;
@@ -84,3 +64,4 @@ body{
     color: #fff;
     border-radius: 6px;
 }
+

@@ -1,12 +1,12 @@
 // import React from "react";
-import { useState } from "react";
+// import { useState } from "react";
 import InputField from "./InputField";
 
-function Details(){
-    const [formData, setFormData] = useState("");
-
+function Details({formData, setFormData}){
+    
     function handleChange(event){
-        setFormData({...formData,[event.target.name]: event.target.name});
+        const {name,value} = event.target;
+        setFormData({...formData,[name]: value});
     }
 
     return(
@@ -17,18 +17,18 @@ function Details(){
                     <InputField
                         className="input-data" 
                         label="First Name"
-                        name="First Name"
+                        name="firstName"
                         type="text"
-                        value={formData.name}
+                        value={formData.firstName}
                         onChange={handleChange}
                     />
 
                     <InputField
                         className="input-data" 
                         label="Last Name"
-                        name="Last Name"
+                        name="lastName"
                         type="text"
-                        value={formData.name}
+                        value={formData.lastName}
                         onChange={handleChange}
                     />
                 </div>
@@ -36,18 +36,18 @@ function Details(){
                     <InputField
                         className="input-data" 
                         label="Email"
-                        name="Email"
+                        name="email"
                         type="Email"
-                        value={formData.Email}
+                        value={formData.email}
                         onChange={handleChange}
                     />
 
                     <InputField
                         className="input-data" 
                         label="Phone"
-                        name="Phone"
+                        name="phone"
                         type="Phone"
-                        value={formData.Phone}
+                        value={formData.phone}
                         onChange={handleChange}
                     />
                 </div>
@@ -55,9 +55,9 @@ function Details(){
                     <InputField
                         className="input-data" 
                         label="Address"
-                        name="Address"
+                        name="address"
                         type="text"
-                        value={formData.Phone}
+                        value={formData.address}
                         onChange={handleChange}
                     />
                 </div>

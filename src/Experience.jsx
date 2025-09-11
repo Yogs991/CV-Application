@@ -1,11 +1,11 @@
-import { useState } from "react";
+// import { useState } from "react";
 import InputField from "./InputField";
 
-function Experience(){
-    const [formData, setFormData] = useState("");
+function Experience({formData,setFormData}){
 
     function handleChange(event){
-        setFormData({...formData,[event.target.name]: event.target.name});
+        const {name,value} = event.target;
+        setFormData({...formData,[name]: value});
     }
 
     return(
@@ -16,18 +16,18 @@ function Experience(){
                     <InputField
                         className="input-data" 
                         label="Company Name"
-                        name="Company Name"
+                        name="company"
                         type="text"
-                        value={formData.name}
+                        value={formData.company}
                         onChange={handleChange}
                     />
 
                     <InputField
                         className="input-data" 
                         label="Position Name"
-                        name="Position Name"
+                        name="position"
                         type="text"
-                        value={formData.name}
+                        value={formData.position}
                         onChange={handleChange}
                     />
                 </div>
@@ -35,9 +35,9 @@ function Experience(){
                     <InputField
                         className="input-data" 
                         label="Main Responsibilities"
-                        name="Main Responsibilities"
+                        name="responsibilities"
                         type="textarea"
-                        value={formData.name}
+                        value={formData.responsibilities}
                         onChange={handleChange}
                     />
                 </div>
@@ -45,18 +45,18 @@ function Experience(){
                     <InputField
                         className="input-data" 
                         label="Start Date"
-                        name="Start Date"
+                        name="startDate"
                         type="date"
-                        value={formData.date}
+                        value={formData.startDate}
                         onChange={handleChange}
                     />
 
                     <InputField
                         className="input-data" 
                         label="End Date"
-                        name="End Date"
+                        name="endDate"
                         type="date"
-                        value={formData.date}
+                        value={formData.endDate}
                         onChange={handleChange}
                     />
                 </div>

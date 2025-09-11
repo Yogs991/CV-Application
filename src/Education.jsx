@@ -1,11 +1,11 @@
-import { useState } from "react";
+// import { useState } from "react";
 import InputField from "./InputField";
 
-function Education(){
-    const [formData, setFormData] = useState("");
+function Education({formData, setFormData}){
 
     function handleChange(event){
-        setFormData({...formData,[event.target.name]: event.target.name});
+        const {name,value} = event.target;
+        setFormData({...formData,[name]: value});
     }
 
     return(
@@ -16,18 +16,18 @@ function Education(){
                     <InputField
                         className="input-data" 
                         label="University Name"
-                        name="University Name"
+                        name="university"
                         type="text"
-                        value={formData.name}
+                        value={formData.university}
                         onChange={handleChange}
                     />
 
                     <InputField
                         className="input-data" 
                         label="Title of Study"
-                        name="Title of Study"
+                        name="study"
                         type="text"
-                        value={formData.name}
+                        value={formData.study}
                         onChange={handleChange}
                     />
                 </div>
@@ -35,18 +35,18 @@ function Education(){
                     <InputField
                         className="input-data" 
                         label="Start Date"
-                        name="Start Date"
+                        name="startDate"
                         type="date"
-                        value={formData.date}
+                        value={formData.startDate}
                         onChange={handleChange}
                     />
 
                     <InputField
                         className="input-data" 
                         label="End Date"
-                        name="End Date"
+                        name="endDate"
                         type="date"
-                        value={formData.date}
+                        value={formData.endDate}
                         onChange={handleChange}
                     />
                 </div>
