@@ -19,7 +19,7 @@ function Details({formData, setFormData}){
                         label="First Name"
                         name="firstName"
                         type="text"
-                        value={formData.firstName}
+                        value={formData.firstName || ''}
                         onChange={handleChange}
                     />
 
@@ -28,7 +28,7 @@ function Details({formData, setFormData}){
                         label="Last Name"
                         name="lastName"
                         type="text"
-                        value={formData.lastName}
+                        value={formData.lastName || ''}
                         onChange={handleChange}
                     />
                 </div>
@@ -38,7 +38,7 @@ function Details({formData, setFormData}){
                         label="Email"
                         name="email"
                         type="Email"
-                        value={formData.email}
+                        value={formData.email || ''}
                         onChange={handleChange}
                     />
 
@@ -47,7 +47,7 @@ function Details({formData, setFormData}){
                         label="Phone"
                         name="phone"
                         type="Phone"
-                        value={formData.phone}
+                        value={formData.phone || ''}
                         onChange={handleChange}
                     />
                 </div>
@@ -57,7 +57,7 @@ function Details({formData, setFormData}){
                         label="Address"
                         name="address"
                         type="text"
-                        value={formData.address}
+                        value={formData.address || ''}
                         onChange={handleChange}
                     />
                 </div>

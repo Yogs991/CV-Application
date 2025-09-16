@@ -18,7 +18,7 @@ function Education({formData, setFormData}){
                         label="University Name"
                         name="university"
                         type="text"
-                        value={formData.university}
+                        value={formData.university || ''}
                         onChange={handleChange}
                     />
 
@@ -27,7 +27,7 @@ function Education({formData, setFormData}){
                         label="Title of Study"
                         name="study"
                         type="text"
-                        value={formData.study}
+                        value={formData.study || ''}
                         onChange={handleChange}
                     />
                 </div>
@@ -37,7 +37,7 @@ function Education({formData, setFormData}){
                         label="Start Date"
                         name="startDate"
                         type="date"
-                        value={formData.startDate}
+                        value={formData.startDate || ''}
                         onChange={handleChange}
                     />
 
@@ -46,7 +46,7 @@ function Education({formData, setFormData}){
                         label="End Date"
                         name="endDate"
                         type="date"
-                        value={formData.endDate}
+                        value={formData.endDate || ''}
                         onChange={handleChange}
                     />
                 </div>

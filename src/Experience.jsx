@@ -18,7 +18,7 @@ function Experience({formData,setFormData}){
                         label="Company Name"
                         name="company"
                         type="text"
-                        value={formData.company}
+                        value={formData.company || ''}
                         onChange={handleChange}
                     />
 
@@ -27,7 +27,7 @@ function Experience({formData,setFormData}){
                         label="Position Name"
                         name="position"
                         type="text"
-                        value={formData.position}
+                        value={formData.position || ''}
                         onChange={handleChange}
                     />
                 </div>
@@ -37,7 +37,7 @@ function Experience({formData,setFormData}){
                         label="Main Responsibilities"
                         name="responsibilities"
                         type="textarea"
-                        value={formData.responsibilities}
+                        value={formData.responsibilities || ''}
                         onChange={handleChange}
                     />
                 </div>
@@ -47,7 +47,7 @@ function Experience({formData,setFormData}){
                         label="Start Date"
                         name="startDate"
                         type="date"
-                        value={formData.startDate}
+                        value={formData.startDate || ''}
                         onChange={handleChange}
                     />
 
@@ -56,7 +56,7 @@ function Experience({formData,setFormData}){
                         label="End Date"
                         name="endDate"
                         type="date"
-                        value={formData.endDate}
+                        value={formData.endDate || ''}
                         onChange={handleChange}
                     />
                 </div>
