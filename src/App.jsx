@@ -17,34 +17,83 @@ function App() {
           <Education formData={educationData} setFormData={setEducationData}/>
           <Experience formData={experienceData} setFormData={setExperienceData}/>
         </div>
-        <div className='preview'>
-          <h1>Personal Information</h1>
-          <div className='preview-details'>
-            <h2>{detailsData.firstName}</h2>
-            <h2>{detailsData.lastName}</h2>
-            <p>{detailsData.email}</p>
-            <p>{detailsData.phone}</p>
-            <p>{detailsData.address}</p>
+        <div className='resume'>
+          <div className="resume-header">
+            <div className="full-name">
+              {detailsData.firstName}
+              {detailsData.lastName}
+            </div>
+            <div className="job-title">
+              <h3>WEB DEVELOPER</h3>
+            </div>
           </div>
-          <hr />
-          <h1>Education</h1>
-          <div className='preview-education'>
-            <h2>{educationData.university}</h2>
-            <h3>{educationData.study}</h3>
-            <p>{educationData.startDate}</p>
-            <p>{educationData.endDate}</p>
+          <div className="main-content">
+            <div className="resume-section">
+              <div className="resume-heading">
+                <h3>PROFILE</h3>
+              </div>
+              <div className="profile-summary">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                  Ut enim ad minim veniam, 
+                  quis nostrud exercitation ullamco
+                </p>
+              </div>
+            </div>
+            <hr />
+            <div className="resume-section">
+              <div className="resume-heading">
+                <h3>WORK EXPERIENCE</h3>
+              </div>
+              <div className="experience">
+                <div className="company">
+                  <h3>{experienceData.company}</h3>
+                </div>
+                <div className="period">
+                  <p>{experienceData.startDate} - {experienceData.endDate}</p>
+                </div>
+                <div className="position">
+                  <h4>{experienceData.position}</h4>
+                </div>
+                <div className='description'>
+                  <p>{experienceData.responsibilities}</p>
+                </div>
+              </div>
+            </div>
+            <hr />
+            <div className="resume-section">
+              <div className="resume-heading">
+                <h3>EDUCATION</h3>
+              </div>
+              <div className='experience'>
+                <div className="course">
+                  <h3>{educationData.university}</h3>
+                </div>
+                <div className="period">
+                  <p>{educationData.startDate} - {educationData.endDate}</p>
+                </div>
+                <div className="studies">
+                  <h4>{educationData.study}</h4>
+                </div>
+              </div>
+            </div>
           </div>
-          <hr />
-          <h1>Experience</h1>
-          <div className='preview-experience'>
-            <h2>{experienceData.company}</h2>
-            <h3>{experienceData.position}</h3>
-            <p>{experienceData.responsibilities}</p>
-            <p>{experienceData.startDate}</p>
-            <p>{experienceData.endDate}</p>
+          <div className="sidebar">
+            <div className="resume-section">
+              <div className="resume-heading">
+                <h3>CONTACT</h3>
+              </div>
+              <div className="contact-info">
+                <ul>
+                  <li>{detailsData.email}</li>
+                  <li>{detailsData.phone}</li>
+                  <li>{detailsData.address}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
   )
 }
 
