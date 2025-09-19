@@ -21,6 +21,7 @@ function App() {
           <div className="resume-header">
             <div className="full-name">
               {detailsData.firstName}
+              &nbsp;
               {detailsData.lastName}
             </div>
             <div className="job-title">
